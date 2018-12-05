@@ -1,0 +1,11 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+
+$ F_{meas} = F_{in} + \frac{F_{dut}-1}{G_{in}} + \frac{F_{out}-1}{G_{in} \cdot G_{dut}} $
+
+$ \Rightarrow F_{dut} = G_{in} \cdot (F_{meas} - F_{in}) - \frac{F_{out} - 1}{G_{dut}} + 1  $
+
+$ \Rightarrow F_{dut} = \lvert S_{21}^{in} \rvert \cdot \Big( F_{meas} - \frac{1}{\lvert S_{21}^{in} \rvert} \Big)  - \frac{\frac{1}{\lvert S_{21}^{out} \rvert} - 1}{\lvert S_{21}^{dut} \rvert} + 1 $
+
+\end{document}

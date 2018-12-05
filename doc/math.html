@@ -1,0 +1,251 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+<h1> Device Noise Figure Deembedding </h1>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+  <msub>
+    <mi>F</mi>
+    <mrow>
+      <mi>m</mi>
+      <mi>e</mi>
+      <mi>a</mi>
+      <mi>s</mi>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <msub>
+    <mi>F</mi>
+    <mrow>
+      <mi>i</mi>
+      <mi>n</mi>
+    </mrow>
+  </msub>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <msub>
+        <mi>F</mi>
+        <mrow>
+          <mi>d</mi>
+          <mi>u</mi>
+          <mi>t</mi>
+        </mrow>
+      </msub>
+      <mo>−</mo>
+      <mn>1</mn>
+    </mrow>
+    <msub>
+      <mi>G</mi>
+      <mrow>
+        <mi>i</mi>
+        <mi>n</mi>
+      </mrow>
+    </msub>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <mrow>
+      <msub>
+        <mi>F</mi>
+        <mrow>
+          <mi>o</mi>
+          <mi>u</mi>
+          <mi>t</mi>
+        </mrow>
+      </msub>
+      <mo>−</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow>
+      <msub>
+        <mi>G</mi>
+        <mrow>
+          <mi>i</mi>
+          <mi>n</mi>
+        </mrow>
+      </msub>
+      <mo>⋅</mo>
+      <msub>
+        <mi>G</mi>
+        <mrow>
+          <mi>d</mi>
+          <mi>u</mi>
+          <mi>t</mi>
+        </mrow>
+      </msub>
+    </mrow>
+  </mfrac>
+</mrow>
+</math>
+
+<br />
+<br />
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mo accent="false">⇒</mo>
+    <msub>
+      <mi>F</mi>
+      <mrow>
+        <mi>d</mi>
+        <mi>u</mi>
+        <mi>t</mi>
+      </mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
+      <mi>G</mi>
+      <mrow>
+        <mi>i</mi>
+        <mi>n</mi>
+      </mrow>
+    </msub>
+    <mo>⋅</mo>
+    <mo stretchy="false" form="prefix">(</mo>
+    <msub>
+      <mi>F</mi>
+      <mrow>
+        <mi>m</mi>
+        <mi>e</mi>
+        <mi>a</mi>
+        <mi>s</mi>
+      </mrow>
+    </msub>
+    <mo>−</mo>
+    <msub>
+      <mi>F</mi>
+      <mrow>
+        <mi>i</mi>
+        <mi>n</mi>
+      </mrow>
+    </msub>
+    <mo stretchy="false" form="postfix">)</mo>
+    <mo>−</mo>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>F</mi>
+          <mrow>
+            <mi>o</mi>
+            <mi>u</mi>
+            <mi>t</mi>
+          </mrow>
+        </msub>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+      <msub>
+        <mi>G</mi>
+        <mrow>
+          <mi>d</mi>
+          <mi>u</mi>
+          <mi>t</mi>
+        </mrow>
+      </msub>
+    </mfrac>
+    <mo>+</mo>
+    <mn>1</mn>
+  </mrow>
+</math>
+
+<h2>Corresponding VNA Trace Math</h2>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mo accent="false">⇒</mo>
+    <msub>
+      <mi>F</mi>
+      <mrow>
+        <mi>d</mi>
+        <mi>u</mi>
+        <mi>t</mi>
+      </mrow>
+    </msub>
+    <mo>=</mo>
+    <mo stretchy="false" form="prefix">|</mo>
+    <msubsup>
+      <mi>S</mi>
+      <mn>21</mn>
+      <mrow>
+        <mi>i</mi>
+        <mi>n</mi>
+      </mrow>
+    </msubsup>
+    <mo stretchy="false" form="postfix">|</mo>
+    <mo>⋅</mo>
+    <mo minsize="1.8" maxsize="1.8" stretchy="false" form="prefix">(</mo>
+    <msub>
+      <mi>F</mi>
+      <mrow>
+        <mi>m</mi>
+        <mi>e</mi>
+        <mi>a</mi>
+        <mi>s</mi>
+      </mrow>
+    </msub>
+    <mo>−</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <mo stretchy="false" form="prefix">|</mo>
+        <msubsup>
+          <mi>S</mi>
+          <mn>21</mn>
+          <mrow>
+            <mi>i</mi>
+            <mi>n</mi>
+          </mrow>
+        </msubsup>
+        <mo stretchy="false" form="postfix">|</mo>
+      </mrow>
+    </mfrac>
+    <mo minsize="1.8" maxsize="1.8" stretchy="false" form="postfix">)</mo>
+    <mo>−</mo>
+    <mfrac>
+      <mrow>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <mo stretchy="false" form="prefix">|</mo>
+            <msubsup>
+              <mi>S</mi>
+              <mn>21</mn>
+              <mrow>
+                <mi>o</mi>
+                <mi>u</mi>
+                <mi>t</mi>
+              </mrow>
+            </msubsup>
+            <mo stretchy="false" form="postfix">|</mo>
+          </mrow>
+        </mfrac>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+      <mrow>
+        <mo stretchy="false" form="prefix">|</mo>
+        <msubsup>
+          <mi>S</mi>
+          <mn>21</mn>
+          <mrow>
+            <mi>d</mi>
+            <mi>u</mi>
+            <mi>t</mi>
+          </mrow>
+        </msubsup>
+        <mo stretchy="false" form="postfix">|</mo>
+      </mrow>
+    </mfrac>
+    <mo>+</mo>
+    <mn>1</mn>
+  </mrow>
+</math>
+</body>
+</html>
