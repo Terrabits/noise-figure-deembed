@@ -1,6 +1,10 @@
-import skrf as rf
+import numpy as np
+import skrf  as rf
 
 math_expression = 'linMag({input_trace})^2 * ({nf_trace} - (1/linMag({input_trace})^2)) - ((1/linMag({output_trace})^2)-1)/linMag({gain_trace})^2 + 1'
+
+def f_to_db(mag):
+    return 10.0 * np.log10(mag)
 
 def read_s21_complex(filename, interpolated_freq_Hz=None):
     n = rf.Network(filename)
@@ -24,14 +28,8 @@ def apply_math(input_trace, output_trace, gain_trace, nf_trace):
     params[    'nf_trace'] =     nf_trace
     vna.trace(nf_trace).set_math(math_expression.format_map(params))
 
-def calculate_deembedded_nf(input_s21_lin_mag, output_s21_lin_mag, gain_lin_mag, f_meas_lin_mag):
-    assert len(input_s21_lin_mag) == len(output_s21_lin_mag) == len(gain_lin_mag) == len(f_total_lin_mag)
-    # Clean up the names a little to make the math
-    # more legible
-    Fin   = 1.0 / input_s21input_s21_lin_mag
-    Gin    = input_s21_lin_mag
-    Fout  = 1.0 / output_s21_lin_mag
-    Fmeas = f_meas_lin_mag
-    Gdut = gain_lin_mag
-    corrected_nf = Gin * (Fmeas - Fin) - ((Fout - 1.0) / (Gdut)) + 1
-    return corrected_nf
+def calculate_deembedded_nf(Gin, Gout, Gdut, Fmeas):
+    assert len(Gin) == len(Gout) == len(Gdut) == len(Fmeas)
+    Fin   = 1.0 / Gin
+    Fout  = 1.0 / Gout
+    return Gin * (Fmeas - Fin) - ((Fout - 1.0) / (Gdut)) + 1
