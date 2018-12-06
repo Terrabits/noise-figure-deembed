@@ -9,61 +9,38 @@
 <h1> Device Noise Figure Deembedding </h1>
 
 <math xmlns="http://www.w3.org/1998/Math/MathML">
-<mrow>
-  <msub>
-    <mi>F</mi>
-    <mrow>
-      <mi>m</mi>
-      <mi>e</mi>
-      <mi>a</mi>
-      <mi>s</mi>
-    </mrow>
-  </msub>
-  <mo>=</mo>
-  <msub>
-    <mi>F</mi>
-    <mrow>
-      <mi>i</mi>
-      <mi>n</mi>
-    </mrow>
-  </msub>
-  <mo>+</mo>
-  <mfrac>
-    <mrow>
-      <msub>
-        <mi>F</mi>
-        <mrow>
-          <mi>d</mi>
-          <mi>u</mi>
-          <mi>t</mi>
-        </mrow>
-      </msub>
-      <mo>−</mo>
-      <mn>1</mn>
-    </mrow>
+  <mrow>
     <msub>
-      <mi>G</mi>
+      <mi>F</mi>
+      <mrow>
+        <mi>m</mi>
+        <mi>e</mi>
+        <mi>a</mi>
+        <mi>s</mi>
+      </mrow>
+    </msub>
+    <mo>=</mo>
+    <msub>
+      <mi>F</mi>
       <mrow>
         <mi>i</mi>
         <mi>n</mi>
       </mrow>
     </msub>
-  </mfrac>
-  <mo>+</mo>
-  <mfrac>
-    <mrow>
-      <msub>
-        <mi>F</mi>
-        <mrow>
-          <mi>o</mi>
-          <mi>u</mi>
-          <mi>t</mi>
-        </mrow>
-      </msub>
-      <mo>−</mo>
-      <mn>1</mn>
-    </mrow>
-    <mrow>
+    <mo>+</mo>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>F</mi>
+          <mrow>
+            <mi>d</mi>
+            <mi>u</mi>
+            <mi>t</mi>
+          </mrow>
+        </msub>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
       <msub>
         <mi>G</mi>
         <mrow>
@@ -71,18 +48,41 @@
           <mi>n</mi>
         </mrow>
       </msub>
-      <mo>⋅</mo>
-      <msub>
-        <mi>G</mi>
-        <mrow>
-          <mi>d</mi>
-          <mi>u</mi>
-          <mi>t</mi>
-        </mrow>
-      </msub>
-    </mrow>
-  </mfrac>
-</mrow>
+    </mfrac>
+    <mo>+</mo>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>F</mi>
+          <mrow>
+            <mi>o</mi>
+            <mi>u</mi>
+            <mi>t</mi>
+          </mrow>
+        </msub>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+      <mrow>
+        <msub>
+          <mi>G</mi>
+          <mrow>
+            <mi>i</mi>
+            <mi>n</mi>
+          </mrow>
+        </msub>
+        <mo>⋅</mo>
+        <msub>
+          <mi>G</mi>
+          <mrow>
+            <mi>d</mi>
+            <mi>u</mi>
+            <mi>t</mi>
+          </mrow>
+        </msub>
+      </mrow>
+    </mfrac>
+  </mrow>
 </math>
 
 <br />
@@ -178,7 +178,10 @@
         <mi>n</mi>
       </mrow>
     </msubsup>
-    <mo stretchy="false" form="postfix">|</mo>
+    <msup>
+      <mo stretchy="false" form="postfix">|</mo>
+      <mn>2</mn>
+    </msup>
     <mo>⋅</mo>
     <mo minsize="1.8" maxsize="1.8" stretchy="false" form="prefix">(</mo>
     <msub>
@@ -203,7 +206,10 @@
             <mi>n</mi>
           </mrow>
         </msubsup>
-        <mo stretchy="false" form="postfix">|</mo>
+        <msup>
+          <mo stretchy="false" form="postfix">|</mo>
+          <mn>2</mn>
+        </msup>
       </mrow>
     </mfrac>
     <mo minsize="1.8" maxsize="1.8" stretchy="false" form="postfix">)</mo>
@@ -223,7 +229,10 @@
                 <mi>t</mi>
               </mrow>
             </msubsup>
-            <mo stretchy="false" form="postfix">|</mo>
+            <msup>
+              <mo stretchy="false" form="postfix">|</mo>
+              <mn>2</mn>
+            </msup>
           </mrow>
         </mfrac>
         <mo>−</mo>
@@ -240,7 +249,10 @@
             <mi>t</mi>
           </mrow>
         </msubsup>
-        <mo stretchy="false" form="postfix">|</mo>
+        <msup>
+          <mo stretchy="false" form="postfix">|</mo>
+          <mn>2</mn>
+        </msup>
       </mrow>
     </mfrac>
     <mo>+</mo>
